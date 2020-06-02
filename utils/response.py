@@ -8,6 +8,6 @@ class APIResponse(Response):
             'msg': data_msg,
         }
         if results:
-            data[results] = results
+            data['results'] = results
             data.update(kwargs)
         super().__init__(data=data, status=status, headers=headers, content_type=content_type)
